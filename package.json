@@ -1,0 +1,29 @@
+{
+  "name": "react-learn-way",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liumangtul/react-learn-way.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liumangtul/react-learn-way/issues"
+  },
+  "homepage": "https://github.com/liumangtul/react-learn-way#readme",
+  "description": "",
+  "devDependencies": {
+    "babel-loader": "^6.2.8",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-watch": "^4.3.11",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  }
+}
