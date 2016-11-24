@@ -1,9 +1,15 @@
 var path = require('path');
+var webpack=require('webpack');
 
 module.exports = {
-    entry: './way1/jsx/way1.jsx',
+    /*entry: [
+        'webpack/hot/dev-server',
+        'webpack-dev-server/client?http://localhost:8080',
+        path.resolve(__dirname, './way1/js/main.js')
+    ],*/
+    entry: './way1/js/main.js',
     output: {
-        path: path.join(__dirname, '/dist'),
+        path: path.join(__dirname, './way1/js/dist'),
         filename: 'bundle.js'
     },
     resolve: {
@@ -11,7 +17,10 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.js|jsx$/, loaders: ['babel'] }
+            {
+                test        :   /\.js|jsx$/,
+                loaders     :   ['babel-loader?presets[]=es2015,presets[]=react']
+            }
         ]
     }
 }
