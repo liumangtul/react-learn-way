@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base way1"
+    "dev": "webpack-dev-server --config webpack.config.js --inline --devtool eval --progress --colors --hot --content-base ./way1/",
+    "yan": "webpack-dev-server --hot --inline --content-base --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
     "babel-loader": "^6.2.8",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-2": "^6.18.0",
     "gulp": "^3.9.1",
     "gulp-connect": "^5.0.0",
     "gulp-sass": "^2.3.2",

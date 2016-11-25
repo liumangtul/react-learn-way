@@ -1,5 +1,7 @@
 var path = require('path');
 var webpack=require('webpack');
+var webpackBase = require("./webpack.config.js");
+
 
 module.exports = {
     /*entry: [
@@ -9,7 +11,7 @@ module.exports = {
     ],*/
     entry: './way1/js/main.js',
     output: {
-        path: path.join(__dirname, './way1/js/dist'),
+        path: path.join(__dirname, './way1/js/'),
         filename: 'bundle.js'
     },
     resolve: {
@@ -19,8 +21,15 @@ module.exports = {
         loaders: [
             {
                 test        :   /\.js|jsx$/,
-                loaders     :   ['babel-loader?presets[]=es2015,presets[]=react']
+                loader      :   "babel-loader",
+                query       :   {
+                                    presets: ["react", "es2015", "stage-2"],
+                                    cacheDirectory: true
+                                },
+                include     :   path.join(__dirname, '.'),
+                exclude     :   /node_modules/
             }
         ]
-    }
+    },
+    plugins: []
 }
