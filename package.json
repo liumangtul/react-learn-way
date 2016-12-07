@@ -7,7 +7,8 @@
     "build": "webpack",
     "dev": "webpack-dev-server --config webpack.config.js --inline --devtool eval --progress --colors --hot --content-base ./way1/",
     "yan": "webpack-dev-server --hot --inline --content-base --config webpack.config.js",
-    "app": "webpack-dev-server --config webpack.config.app.js --inline --devtool eval --progress --colors --hot --content-base ./app/"
+    "app": "webpack-dev-server --config webpack.config.app.js --inline --devtool eval --progress --colors --hot --content-base ./app/",
+    "redux": "webpack-dev-server --config webpack.config.redux.js --inline --devtool eval --progress --colors --hot --content-base ./redux/"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,7 @@
     "gulp-watch": "^4.3.11",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
+    "redux": "^3.6.0",
     "webpack": "^1.13.3",
     "webpack-dev-server": "^1.16.2"
   }
