@@ -8,7 +8,8 @@
     "dev": "webpack-dev-server --config webpack.config.js --inline --devtool eval --progress --colors --hot --content-base ./way1/",
     "yan": "webpack-dev-server --hot --inline --content-base --config webpack.config.js",
     "app": "webpack-dev-server --config webpack.config.app.js --inline --devtool eval --progress --colors --hot --content-base ./app/",
-    "redux": "webpack-dev-server --config webpack.config.redux.js --inline --devtool eval --progress --colors --hot --content-base ./redux/"
+    "redux": "webpack-dev-server --config webpack.config.redux.js --inline --devtool eval --progress --colors --hot --content-base ./redux/",
+    "iBook": "webpack-dev-server --config webpack.config.iBook.js --inline --devtool eval --progress --colors --hot --content-base ./iBook/"
   },
   "repository": {
     "type": "git",
