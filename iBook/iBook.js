@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import reactDOM from 'react-dom';
 import {Hello} from './hellos';
@@ -36,3 +37,12 @@ var props={
 reactDOM.render(
     <Hello {...props}/>,document.getElementById('app')
 );
+*/
+
+import React from 'react';
+import Profile from './Profile';
+import reactDOM from 'react-dom';
+reactDOM.render(
+    <Profile name="Promise" age="20"/>,
+    document.getElementById('app')
+)

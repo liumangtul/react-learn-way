@@ -1,7 +1,7 @@
 import React from 'react';
 import {findDOMNode} from 'react-dom';
 class Hello extends React.Component{
-    constructor(props){
+    constructor(props){ 
         super(props);
         this.state={
             like:'电脑游戏'
@@ -40,3 +40,4 @@ class Hello extends React.Component{
     }
 }
 export {Hello};
+
