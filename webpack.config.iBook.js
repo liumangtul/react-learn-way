@@ -11,7 +11,7 @@ module.exports = {
     ],*/
     entry: './iBook/iBook.js',
     output: {
-        path: path.join(__dirname, './app/'),
+        path: path.join(__dirname, './iBook/'),
         filename: 'app.js'
     },
     resolve: {

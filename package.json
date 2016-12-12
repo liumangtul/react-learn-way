@@ -5,6 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
+    "iBookBuild":"webpack --config webpack.config.iBook.js",
     "dev": "webpack-dev-server --config webpack.config.js --inline --devtool eval --progress --colors --hot --content-base ./way1/",
     "yan": "webpack-dev-server --hot --inline --content-base --config webpack.config.js",
     "app": "webpack-dev-server --config webpack.config.app.js --inline --devtool eval --progress --colors --hot --content-base ./app/",
