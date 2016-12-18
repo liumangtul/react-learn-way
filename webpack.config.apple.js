@@ -1,6 +1,6 @@
 var path = require('path');
 var webpack=require('webpack');
-var webpackApp = require("./webpack.config.counter.js");
+var webpackApp = require("./webpack.config.apple.js");
 
 
 module.exports = {
@@ -9,10 +9,10 @@ module.exports = {
         'webpack-dev-server/client?http://localhost:8080',
         path.resolve(__dirname, './way1/js/main.js')
     ],*/
-    entry: './Counter/index.js',
+    entry: './apple/index.js',
     output: {
         path: path.join(__dirname, './'),
-        filename: 'boudle.js'
+        filename: 'apple.js'
     },
     resolve: {
         extensions: ['', '.js', '.jsx']

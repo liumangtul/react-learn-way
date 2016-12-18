@@ -11,7 +11,8 @@
     "app": "webpack-dev-server --config webpack.config.app.js --inline --devtool eval --progress --colors --hot --content-base ./app/",
     "redux": "webpack-dev-server --config webpack.config.redux.js --inline --devtool eval --progress --colors --hot --content-base ./redux/",
     "iBook": "webpack-dev-server --config webpack.config.iBook.js --inline --devtool eval --progress --colors --hot --content-base ./iBook/",
-    "counter": "webpack-dev-server --config webpack.config.counter.js --inline --devtool eval --progress --colors --hot --content-base ./Counter/"
+    "counter": "webpack-dev-server --config webpack.config.counter.js --inline --devtool eval --progress --colors --hot --content-base ./Counter/",
+    "apple": "webpack-dev-server --config webpack.config.apple.js --inline --devtool eval --progress --colors --hot --content-base ./apple/"
   },
   "repository": {
     "type": "git",
