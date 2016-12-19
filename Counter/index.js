@@ -10,35 +10,42 @@ const ADD_COUNT='ADD_COUNT';
 const REMOVE_COUNT='REMOVE_COUNT';
 
 //ActionCreators
-function showCount(count) {
+function showCount(name) {
     return {
         type:SHOW_COUNT,
-        count
+        name
     }
 }
-function addCount(count) {
+function addCount(name) {
     return {
         type:ADD_COUNT,
-        count
+        name
     }
 }
-function removeCount(count) {
+function removeCount(name) {
     return {
         type:REMOVE_COUNT,
-        count
+        name
     }
 }
 
 //Reducers
-function countReducer(state=0,action) {
+function countReducer(state=['王岩','流氓兔'],action) {
     //如果是Object.assgin({},state,...)就报错。
+    console.log(action)
     switch(action.type){
         case SHOW_COUNT:
-            return action.count;
+            return Object.assign([],state,[
+                ...state,
+                ...action.name
+            ]);
         case ADD_COUNT:
-            return  action.count+1;
+            return  Object.assign([],state,[
+                ...state,
+                action.name
+            ]);
         case REMOVE_COUNT:
-            return action.count-1;
+            return state.slice(1);
         default:
             return state;
     }
@@ -55,29 +62,26 @@ let store=createStore(rootReducer);
 class Demo1 extends React.Component{
     constructor(props){
         super(props);
-        /*this.state={
-            count:0
-        }*/
     }
 
     componentDidMount(){
-        this.props.showCount(1)
+        this.props.showCount(['张三','王五','赵四'])
     }
 
     handleAddCount(){
-        let count=this.props.count;
-        this.props.addCount(count);
+        let name='程序猿'+parseInt(Math.random()*100)+'号';
+        this.props.addCount(name);
     }
 
     handleRemoveCount(){
-        this.props.removeCount(this.props.count);
+        this.props.removeCount();
     }
 
     render(){
         console.log(this.state,this.props)
         return <div>
             <h1>Counter Demo</h1>
-            <h2>{this.props.count}</h2>
+            <h2>{this.props.name.join(';')}</h2>
             <button onClick={()=>this.handleAddCount()}>ADD</button>
             <br/>
             <button onClick={()=>this.handleRemoveCount()}>REMOVE</button>
@@ -89,7 +93,7 @@ class Demo1 extends React.Component{
 //Connect
 let mapStateToProps=(state)=>{
     return {
-        count:state.countReducer
+        name:state.countReducer
     }
 };
 let mapDispatchToProps=(dispatch,ownProps)=>{
