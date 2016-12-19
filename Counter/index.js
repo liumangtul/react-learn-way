@@ -112,4 +112,4 @@ ReactDOM.render(
         <DemoA/>
     </Provider>,
     rootElement
-)
+);
