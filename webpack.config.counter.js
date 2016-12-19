@@ -12,7 +12,7 @@ module.exports = {
     entry: './Counter/index.js',
     output: {
         path: path.join(__dirname, './'),
-        filename: 'boudle.js'
+        filename: 'counter.js'
     },
     resolve: {
         extensions: ['', '.js', '.jsx']

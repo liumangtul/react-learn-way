@@ -58,6 +58,7 @@ import {createStore,combineReducers,bindActionCreators} from 'redux';
 import {Provider,connect} from 'react-redux';
 
 const HELLO='HELLO';
+
 //ActionCreator
 function changeHello(text) {
     return {
@@ -77,17 +78,20 @@ function hello(state='',action) {
 }
 let rootReducer=combineReducers({
     hello
-});
+},window.devToolsExtension ? window.devToolsExtension() : undefined);
 
+//Store
 let store=createStore(rootReducer);
+
+//Component
 class Hello extends React.Component{
     constructor(props){
         super(props);
     }
 
     handleClick(){
-        console.info('handleClick=>state,props',this.state,this.props)
-        this.props.changeHello(Math.random()*100)
+        console.info('handleClick=>state,props',this.state,this.props);
+        this.props.changeHello(parseInt(Math.random()*100))
     }
 
     componentDidMount(){
@@ -96,21 +100,23 @@ class Hello extends React.Component{
 
     render(){
         //不要在render里写改变props或state的语句
-        console.info('render=>state,props',this.state,this.props)
+        console.info('render=>state,props',this.state,this.props);
         return <div>
             <h1>{this.props.hello}</h1>
             <button onClick={()=>this.handleClick()}>touch me!</button>
         </div>
     }
 }
+
+//Connect
 function mapStateToProps(state) {
-    console.info('mapStateToProps=>state:',state)
+    console.info('mapStateToProps=>state:',state);
     return {
         hello:state.hello
     }
 }
 function mapDispatchToProps(dispatch,ownProps) {
-    console.info('mapDispatchToProps=>dispatch,ownProps,changeHello',dispatch,ownProps,changeHello)
+    console.info('mapDispatchToProps=>dispatch,ownProps,changeHello',dispatch,ownProps,changeHello);
     return bindActionCreators({
         changeHello:changeHello
     },dispatch)
@@ -118,6 +124,7 @@ function mapDispatchToProps(dispatch,ownProps) {
 }
 const HelloRedux=connect(mapStateToProps,mapDispatchToProps)(Hello);
 
+//Render
 ReactDOM.render(
     <Provider store={store} key="redux">
         <HelloRedux/>
