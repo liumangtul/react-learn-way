@@ -12,7 +12,9 @@
     "redux": "webpack-dev-server --config webpack.config.redux.js --inline --devtool eval --progress --colors --hot --content-base ./redux/",
     "iBook": "webpack-dev-server --config webpack.config.iBook.js --inline --devtool eval --progress --colors --hot --content-base ./iBook/",
     "counter": "webpack-dev-server --config webpack.config.counter.js --inline --devtool eval --progress --colors --hot --content-base ./Counter/",
-    "apple": "webpack-dev-server --config webpack.config.apple.js --inline --devtool eval --progress --colors --hot --content-base ./apple/"
+    "apple": "webpack-dev-server --config webpack.config.apple.js --inline --devtool eval --progress --colors --hot --content-base ./apple/",
+    "todo": "webpack-dev-server --config webpack.config.todo.js --inline --devtool eval --progress --colors --hot --content-base ./todo/",
+    "todo2": "webpack-dev-server --config webpack.config.todo2.js --inline --devtool eval --progress --colors --hot --content-base ./todo2/"
   },
   "repository": {
     "type": "git",
