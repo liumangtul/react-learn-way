@@ -15,7 +15,8 @@
     "apple": "webpack-dev-server --config webpack.config.apple.js --inline --devtool eval --progress --colors --hot --content-base ./apple/",
     "todo": "webpack-dev-server --config webpack.config.todo.js --inline --devtool eval --progress --colors --hot --content-base ./todo/",
     "todo2": "webpack-dev-server --config webpack.config.todo2.js --inline --devtool eval --progress --colors --hot --content-base ./todo2/",
-    "asyn": "webpack-dev-server --config webpack.config.asyn.js --inline --devtool eval --progress --colors --hot --content-base ./asyn/"
+    "asyn": "webpack-dev-server --config webpack.config.asyn.js --inline --devtool eval --progress --colors --hot --content-base ./asyn/",
+    "router": "webpack-dev-server --config webpack.config.router.js --inline --devtool eval --progress --colors --hot --content-base ./react-router/"
   },
   "repository": {
     "type": "git",
@@ -42,6 +43,7 @@
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-redux": "^5.0.1",
+    "react-router": "^3.0.0",
     "redux": "^3.6.0",
     "redux-devtools": "^3.3.1",
     "redux-devtools-dock-monitor": "^1.1.1",
