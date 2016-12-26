@@ -16,7 +16,7 @@
     "todo": "webpack-dev-server --config webpack.config.todo.js --inline --devtool eval --progress --colors --hot --content-base ./todo/",
     "todo2": "webpack-dev-server --config webpack.config.todo2.js --inline --devtool eval --progress --colors --hot --content-base ./todo2/",
     "asyn": "webpack-dev-server --config webpack.config.asyn.js --inline --devtool eval --progress --colors --hot --content-base ./asyn/",
-    "router": "webpack-dev-server --config webpack.config.router.js --inline --devtool eval --progress --colors --hot --content-base ./react-router/"
+    "router": "webpack-dev-server --config webpack.config.router.js --inline --devtool eval --progress --colors --hot --content-base ./reactRouter/"
   },
   "repository": {
     "type": "git",

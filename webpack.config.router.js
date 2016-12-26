@@ -9,9 +9,9 @@ module.exports = {
         'webpack-dev-server/client?http://localhost:8080',
         path.resolve(__dirname, './way1/js/main.js')
     ],*/
-    entry: './react-router/app/main.js',
+    entry: './reactRouter/app/main.js',
     output: {
-        path: path.join(__dirname, './react-router/app/'),
+        path: path.join(__dirname, './reactRouter/app/'),
         filename: 'boudle.js'
     },
     resolve: {
