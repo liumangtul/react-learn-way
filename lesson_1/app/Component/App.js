@@ -1,7 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {showTodo} from '../Action/actionCreator';
+import {requestTodo,receiveTodo,fetchPosts} from '../Action/actionCreator';
+import store from '../store';
 
 class App extends React.Component{
     constructor(props){
@@ -9,23 +10,11 @@ class App extends React.Component{
     }
 
     componentDidMount(){
-        this.props.showTodo([{
-            id:1,
-            title:'Node',
-            content:'噼里啪啦。。。'
-        },{
-            id:2,
-            title:'Angular',
-            content:'哔哩哔哩，小熊熊。。。'
-        },{
-            id:3,
-            title:'React',
-            content:'View Home FackBook Youtube。。。'
-        }])
+        this.props.fetchPosts();
     }
 
     render(){
-        let articleList=this.props.list.map((item,key)=>{
+        let articleList=this.props.data.items.map((item,key)=>{
                 return (
                     <li key={item.id}>
                         <h3><strong>{key+1}.</strong>{item.title}</h3>
@@ -42,9 +31,9 @@ class App extends React.Component{
 }
 
 export default connect(state=>({
-    list:state.todoList
+    data:state.todoList
 }),dispatch=>({
     ...bindActionCreators({
-        showTodo:showTodo
+        fetchPosts:fetchPosts
     },dispatch)
 }))(App);
