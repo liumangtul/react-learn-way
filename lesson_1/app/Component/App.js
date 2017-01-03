@@ -1,8 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {requestTodo,receiveTodo,fetchPosts} from '../Action/actionCreator';
-import store from '../store';
+import {fetchPosts} from '../Action/actionCreator';
 
 class App extends React.Component{
     constructor(props){

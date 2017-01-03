@@ -2,6 +2,7 @@ import {REQUEST_TODO,RECEVIE_TODO} from '../Action/actionCreator';
 
 function todoList(state={
     isLoaded:true,
+    state:0,
     items:[]
 },action) {
     switch (action.type){

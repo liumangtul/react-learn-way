@@ -7,7 +7,6 @@ const RECEVIE_TODO="RECEVIE_TODO";
 /*同步actionCreator*/
 //开始请求todo时
 function requestTodo(state) {
-    console.log('开始请求');
     return {
         type:REQUEST_TODO,
         state
@@ -15,22 +14,22 @@ function requestTodo(state) {
 }
 
 //收到请求todo时
-function receiveTodo(json) {
-    console.log('收到请求');
+function receiveTodo(state,json) {
     return {
         type:RECEVIE_TODO,
+        state,
         items:json
     }
 }
 
 /*异步actionCreator*/
 //处理请求Fetch
-function fetchPosts() {
+function fetchPosts(state) {
 
     return (dispatch)=> {
 
         //开始请求todo
-        dispatch(requestTodo('load...'));
+        dispatch(requestTodo(state));
 
         //fetch API 需要深入研究
         return fetch(`/json.json`)
@@ -40,7 +39,7 @@ function fetchPosts() {
                 }
                 return response.json()
             })
-            .then(json=>dispatch(receiveTodo(json.result)));
+            .then(json=>dispatch(receiveTodo(1,json.result)));
         //尚未设计failure的情况
     }
 }
