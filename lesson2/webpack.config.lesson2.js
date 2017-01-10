@@ -9,7 +9,10 @@ module.exports = {
      'webpack-dev-server/client?http://localhost:8080',
      path.resolve(__dirname, './way1/js/main.js')
      ],*/
-    entry: './lesson2/app/main.js',
+    entry: {
+        boudle:'./lesson2/app/main.js',
+        vendor:['react','redux','react-redux','redux-thunk','isomorphic-fetch','babel-polyfill','react-dom','redux-logger']
+    },
     output: {
         path: path.join(__dirname, './'),
         filename: 'lesson1.js'
@@ -35,6 +38,20 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false } })
+        //new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false } }),
+        new webpack.optimize.UglifyJsPlugin({
+            output: {
+                comments: false,  // remove all comments
+            },
+            compress: {
+                warnings: false
+            }
+        }),
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+            },
+        }),
+        new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js')
     ]
 }

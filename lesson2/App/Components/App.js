@@ -3,7 +3,6 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {userList,addUser,removeUser,editUser} from '../Actions/userList';
 import {style} from '../style/style';
-import $ from 'n-zepto';
 
 class App extends React.Component{
     constructor(props){

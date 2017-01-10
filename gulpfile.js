@@ -6,6 +6,7 @@ var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('connect', function() {
     connect.server({
+        root:'lesson2',
         port:8080,
         livereload:true
     });
