@@ -18,7 +18,8 @@
     "asyn": "webpack-dev-server --config webpack.config.asyn.js --inline --devtool eval --progress --colors --hot --content-base ./asyn/",
     "router": "webpack-dev-server --config webpack.config.router.js --inline --devtool eval --progress --colors --hot --content-base ./reactRouter/",
     "lesson1": "webpack-dev-server --config ./lesson_1/webpack.config.lesson1.js --inline --devtool eval --progress --colors --hot --content-base ./lesson_1/",
-    "lesson2": "webpack-dev-server --config ./lesson2/webpack.config.lesson2.js --inline --devtool eval --progress --colors --hot --content-base ./lesson2/"
+    "lesson2": "webpack-dev-server --config ./lesson2/webpack.config.lesson2.js --inline --devtool eval --progress --colors --hot --content-base ./lesson3/",
+    "lesson3": "webpack-dev-server --config ./lesson3/webpack.config.lesson3.js --inline --devtool eval --progress --colors --hot --content-base ./lesson3/"
   },
   "repository": {
     "type": "git",
